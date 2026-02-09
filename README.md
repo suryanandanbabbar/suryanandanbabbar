@@ -1,4 +1,4 @@
-# 👋 Hello, I'm <a href="https://suryanandan.framer.website">Suryanandan Babbar</a>
+# 👋 Hello, I'm <a href="https://suryanandan.framer.website">Suryanandan Babbar</a> | <a href = "https://www.linkedin.com/in/suryanandanbabbar/">LinkedIn</a>
 
 > Engineering student | Java & DSA | Software Development | Data Science & ML  
 > I build systems that *work*, create *impact*, and then make them elegant.
@@ -96,10 +96,12 @@ Conceptual simulator to demonstrate blockchain fundamentals.
 
 ---
 
-## 📫 Connect With Me
+## 📫 My Platforms
 
 - GitHub: https://github.com/suryanandanbabbar  
 - LinkedIn: https://www.linkedin.com/in/suryanandanbabbar/
+- LeetCode: https://leetcode.com/u/suryanandanbabbar/
+- HackerRank: https://www.hackerrank.com/profile/suryanbabbar
 
 ---
 
