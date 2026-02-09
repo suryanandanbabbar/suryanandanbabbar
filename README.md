@@ -56,7 +56,7 @@ Disaster management platform aimed at preparedness, response, and transparency.
 **CPU Scheduling Algorithm Visualizer**  
 Educational tool to analyze and compare classic OS scheduling strategies.
 
-**Tech:** Java  
+**Tech:** Java, Swing
 **Highlights:** Performance metrics for FCFS, SJF, Round Robin, and Priority Scheduling algorithms
 
 ---
