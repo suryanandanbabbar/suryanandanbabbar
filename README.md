@@ -52,6 +52,15 @@ Disaster management platform aimed at preparedness, response, and transparency.
 
 ---
 
+### 🧠 DebateAI
+**Multi-Agent AI Debate System**
+System that simulates structured debates between multiple AI agents to analyse complex questions and produce more reasoned conclusions.
+
+**Tech:** Java, SpringBoot, OpenAI/Gemini/Claude APIs, REST API Architecture
+**Highlights:** Multi-agent argument generation, iterative debate rounds with rebuttals, moderator agent for evaluation and synthesis, API endpoint for programmatic debate execution
+
+---
+
 ### 🧮 CPU Scheduler  
 **CPU Scheduling Algorithm Visualizer**  
 Educational tool to analyze and compare classic OS scheduling strategies.
