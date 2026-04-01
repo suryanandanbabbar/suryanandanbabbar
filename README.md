@@ -43,6 +43,16 @@ I prefer projects that demonstrate *depth of understanding*, not just functional
 
 ## 🚀 Featured Projects
 
+### 📉 DriftGuard AI
+**Production-Ready Data Drift Detection System**\
+System designed to detect, monitor and alert on data drift in machine learning pipelines before model performance degrades.
+
+**Tech:** Python, FastAPI, Pandas, NumPy, SciPy, Scikit-learn, Plotly, YAML, REST API\
+**Highlights:** PSI, KS, and KL divergence-based drift detection, configurable thresholds, reference vs current dataset comparison, REST API 
+for automated monitoring, interactive dashboard visualisation, alert-ready architecture for production ML systems
+
+---
+
 ### 🟢 PRAYAS  
 **Prediction, Response And Yojana for Aapda Suraksha**  
 Disaster management platform aimed at preparedness, response, and transparency.
