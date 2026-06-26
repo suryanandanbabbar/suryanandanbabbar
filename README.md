@@ -22,42 +22,42 @@ I prefer projects that demonstrate *depth of understanding*, not just functional
 ## 🛠️ Tech Stack
 
 ### Languages
-- Java
-- Python
-- C/C++
-- JavaScript
-- Swift
+`Java` `Python` `C/C++` `JavaScript` `Swift`
 
 ### Core Areas
-- Data Structures & Algorithms
-- Object-Oriented Design
-- Backend Development
-- Machine Learning
-- Data Analysis
-- Geospatial Computing
-- REST API Development
+`Data Structures & Algorithms`
+`Object-Oriented Design`
+`Predictive Analytics`
+`Backend Development`
+`Big Data`
+`REST API Development`
 
-### Tools & Frameworks
-- Spring Boot
-- Swing / AWT
-- React
-- FastAPI
-- NumPy
-- Pandas
-- SciPy
-- Scikit-learn
-- Plotly
-- Matplotlib
-- Seaborn
-- Power BI
-- Git & GitHub
-- Postman
-- npm
-- PyPI
-- IntelliJ IDEA Ultimate
-- Eclipse IDE
-- VS Code
-- Xcode
+### Frameworks & Libraries
+`Spring Boot`
+`FastAPI`
+`React`
+`Swing`
+`AWT`
+`NumPy`
+`Pandas`
+`SciPy`
+`Scikit-learn`
+`Matplotlib`
+`Seaborn`
+
+### Developer Tools
+`Git`
+`GitHub`
+`Postman`
+`Power BI`
+`npm`
+`PyPI`
+
+### Development Environment
+`IntelliJ IDEA Ultimate`
+`VS Code`
+`Eclipse IDE`
+`Xcode`
 
 ---
 
