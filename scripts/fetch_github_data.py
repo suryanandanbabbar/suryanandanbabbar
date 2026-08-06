@@ -26,6 +26,8 @@ def execute_graphql_query(username: str, token: str) -> Dict[str, Any]:
             name
             stargazerCount
             pushedAt
+            isArchived
+            isTemplate
             primaryLanguage {
               name
             }
@@ -66,12 +68,27 @@ def aggregate_languages(repositories: List[Dict[str, Any]]) -> List[str]:
     sorted_langs = sorted(languages.items(), key=lambda item: item[1], reverse=True)
     return [lang for lang, _ in sorted_langs[:3]]
 
-def latest_repository(repositories: List[Dict[str, Any]]) -> Dict[str, str]:
-    """Determines the most recently pushed repository."""
+def latest_repository(repositories: List[Dict[str, Any]], username: str) -> Dict[str, str]:
+    """Determines the most recently pushed development repository."""
     if not repositories:
         return {"name": "N/A", "lang": "N/A", "updated": "N/A"}
         
-    latest = repositories[0] # The GraphQL query is already ordered by PUSHED_AT DESC
+    latest = None
+    for repo in repositories:
+        # Skip the GitHub profile repository because it is automatically updated by
+        # GitHub Actions and does not represent an active development project.
+        if repo.get("name") == username:
+            continue
+        if repo.get("isArchived", False):
+            continue
+        if repo.get("isTemplate", False):
+            continue
+            
+        latest = repo
+        break
+        
+    if not latest:
+        return {"name": "N/A", "lang": "N/A", "updated": "N/A"}
     
     name = latest.get("name", "N/A")
     lang_node = latest.get("primaryLanguage")
@@ -102,7 +119,7 @@ def main():
         repos_conn = user_node.get("repositories", {})
         repositories = repos_conn.get("nodes", [])
         
-        latest_repo_info = latest_repository(repositories)
+        latest_repo_info = latest_repository(repositories, username)
         
         data = {
             "name": user_node.get("name", ""),

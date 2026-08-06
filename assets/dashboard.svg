@@ -97,8 +97,8 @@
             <!-- CURRENT_BUILD -->
             <g transform="translate(0, 150)">
                 <text x="0" y="0" class="title">CURRENT_BUILD</text>
-                <text x="0" y="25" class="label">.repository</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="accent">suryanandanbabbar</text>
-                <text x="0" y="45" class="label">.stack</text>   <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">Python</text>
+                <text x="0" y="25" class="label">.repository</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="accent">LeetCode</text>
+                <text x="0" y="45" class="label">.stack</text>   <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">Java</text>
                 <text x="0" y="65" class="label">.updated</text>    <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">2026-08-06</text>
             </g>
 
