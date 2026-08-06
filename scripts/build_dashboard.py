@@ -128,37 +128,37 @@ def generate_svg(config, theme, portrait_b64, github_data):
             
             <!-- SYS_INFO -->
             <text x="0" y="0" class="title">SYS_INFO</text>
-            <text x="0" y="25" class="label">Name</text>      <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{escape_xml(github_data.get('name', ''))}</text>
-            <text x="0" y="45" class="label">Role</text>      <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{escape_xml(profile.get('role', ''))}</text>
-            <text x="0" y="65" class="label">Education</text> <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{escape_xml(profile.get('education', ''))}</text>
-            <text x="0" y="85" class="label">Focus</text>     <text x="140" y="85" class="text-sec">:</text> <text x="160" y="85" class="value">{escape_xml(profile.get('focus', ''))}</text>
-            <text x="0" y="105" class="label">Stack</text>    <text x="140" y="105" class="text-sec">:</text> <text x="160" y="105" class="value">{escape_xml(profile.get('stack', ''))}</text>
+            <text x="0" y="25" class="label">.name</text>      <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{escape_xml(github_data.get('name', ''))}</text>
+            <text x="0" y="45" class="label">.role</text>      <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{escape_xml(profile.get('role', ''))}</text>
+            <text x="0" y="65" class="label">.education</text> <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{escape_xml(profile.get('education', ''))}</text>
+            <text x="0" y="85" class="label">.focus</text>     <text x="140" y="85" class="text-sec">:</text> <text x="160" y="85" class="value">{escape_xml(profile.get('focus', ''))}</text>
+            <text x="0" y="105" class="label">.stack</text>    <text x="140" y="105" class="text-sec">:</text> <text x="160" y="105" class="value">{escape_xml(profile.get('stack', ''))}</text>
             
             <!-- CURRENT_BUILD -->
             <g transform="translate(0, 150)">
                 <text x="0" y="0" class="title">CURRENT_BUILD</text>
-                <text x="0" y="25" class="label">Repository</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="accent">{escape_xml(github_data.get('latest_repo', 'N/A'))}</text>
-                <text x="0" y="45" class="label">Language</text>   <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{escape_xml(github_data.get('latest_repo_lang', 'N/A'))}</text>
-                <text x="0" y="65" class="label">Updated</text>    <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{escape_xml(github_data.get('latest_repo_updated', 'N/A'))}</text>
+                <text x="0" y="25" class="label">.repository</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="accent">{escape_xml(github_data.get('latest_repo', 'N/A'))}</text>
+                <text x="0" y="45" class="label">.stack</text>   <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{escape_xml(github_data.get('latest_repo_lang', 'N/A'))}</text>
+                <text x="0" y="65" class="label">.updated</text>    <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{escape_xml(github_data.get('latest_repo_updated', 'N/A'))}</text>
             </g>
 
             <!-- GITHUB_TELEMETRY -->
             <g transform="translate(0, 240)">
                 <text x="0" y="0" class="title">GITHUB_TELEMETRY</text>
-                <text x="0" y="25" class="label">Public Repos</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{github_data.get('public_repos', 0)}</text>
-                <text x="0" y="45" class="label">Followers</text>    <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{github_data.get('followers', 0)}</text>
-                <text x="0" y="65" class="label">Stars</text>        <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{github_data.get('stars', 0)}</text>
-                
+                <text x="0" y="25" class="label">.public_repos</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{github_data.get('public_repos', 0)}</text>
+                <text x="0" y="45" class="label">.followers</text>    <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{github_data.get('followers', 0)}</text>
+                <text x="0" y="65" class="label">.stars</text>        <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{github_data.get('stars', 0)}</text>
+
                 <!-- Subcolumn for telemetry -->
-                <text x="280" y="25" class="label">Top Langs</text>  <text x="390" y="25" class="text-sec">:</text> <text x="410" y="25" class="value">{escape_xml(langs)}</text>
-                <text x="280" y="45" class="label">Latest Rel</text> <text x="390" y="45" class="text-sec">:</text> <text x="410" y="45" class="value">{escape_xml(github_data.get('latest_release', 'N/A'))}</text>
+                <text x="280" y="25" class="label">.top_langs</text>  <text x="390" y="25" class="text-sec">:</text> <text x="410" y="25" class="value">{escape_xml(langs)}</text>
+                <text x="280" y="45" class="label">.latest_rel</text> <text x="390" y="45" class="text-sec">:</text> <text x="410" y="45" class="value">{escape_xml(github_data.get('latest_release', 'N/A'))}</text>
             </g>
 
             <!-- PATENT -->
             <g transform="translate(0, 330)">
                 <text x="0" y="0" class="title">PATENT</text>
-                <text x="0" y="25" class="label">Status</text>      <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="success">{escape_xml(patent.get('status', ''))}</text>
-                <text x="0" y="45" class="label">Application</text> <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="success">{escape_xml(patent.get('application_no', ''))}</text>
+                <text x="0" y="25" class="label">.status</text>      <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="success">{escape_xml(patent.get('status', ''))}</text>
+                <text x="0" y="45" class="label">.application_no</text> <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="success">{escape_xml(patent.get('application_no', ''))}</text>
             </g>
             
             <!-- SPECIALIZATION -->
@@ -187,7 +187,7 @@ def generate_svg(config, theme, portrait_b64, github_data):
     
     # Render animated bars instead of percentages. 
     # To keep it decorative, we assign fixed widths for the 3 sample domains requested.
-    radar = [("Backend", 100), ("AI", 100), ("Cloud", 70)]
+    radar = [(".ai", 80), (".backend", 70), (".dsa", 70)]
     y_pos = 25
     for skill, val in radar:
         svg_content += f'<text x="0" y="{y_pos}" class="label">{escape_xml(skill)}</text>\n'
@@ -228,10 +228,10 @@ def generate_svg(config, theme, portrait_b64, github_data):
             <!-- CONTACT -->
             <g transform="translate(0, 665)">
                 <text x="0" y="0" class="title">CONTACT</text>
-                <a href="{escape_xml(contact.get('github', ''))}" target="_blank"><text x="0" y="25" class="value">GitHub</text></a>
-                <a href="{escape_xml(contact.get('linkedin', ''))}" target="_blank"><text x="90" y="25" class="value">LinkedIn</text></a>
-                <a href="{escape_xml(contact.get('portfolio', ''))}" target="_blank"><text x="200" y="25" class="value">Portfolio</text></a>
-                <a href="{escape_xml(contact.get('email', ''))}" target="_blank"><text x="310" y="25" class="value">Email</text></a>
+                <a href="{escape_xml(contact.get('github', ''))}" target="_blank"><text x="0" y="25" class="value">gitHub</text></a>
+                <a href="{escape_xml(contact.get('linkedin', ''))}" target="_blank"><text x="90" y="25" class="value">linkedIn</text></a>
+                <a href="{escape_xml(contact.get('portfolio', ''))}" target="_blank"><text x="200" y="25" class="value">portfolio</text></a>
+                <a href="{escape_xml(contact.get('email', ''))}" target="_blank"><text x="310" y="25" class="value">email</text></a>
             </g>
         </g>
     </g>

@@ -1,16 +1,16 @@
 {
   "profile": {
-    "role": "AI/ML Software Intern Candidate",
-    "education": "B.Tech CSE @ LPU",
-    "focus": "System Design & AI Reasoning",
+    "role": "Intern - Decision Analyst @ EXL",
+    "education": "B.Tech CSE",
+    "focus": "AI/ML & Backend Engineering",
     "stack": "Python, Java, Spring Boot, FastAPI"
   },
   "specialization": [
-    "Artificial Intelligence",
-    "Backend Engineering",
-    "Data Engineering",
-    "Automation",
-    "System Design"
+    "artificial intelligence",
+    "backend engineering",
+    "predictive analytics",
+    "data structures & algorithms",
+    "data engineering"
   ],
   "open_source": {
     "npm": [
