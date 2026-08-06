@@ -231,10 +231,8 @@ def generate_svg(config, theme, portrait_b64, github_data):
             <!-- CONTACT -->
             <g transform="translate(0, {contact_y})">
                 <text x="0" y="0" class="title">CONTACT</text>
-                <text x="0" y="25" class="value">GitHub</text>
-                <text x="90" y="25" class="value">LinkedIn</text>
-                <text x="200" y="25" class="value">Portfolio</text>
-                <text x="310" y="25" class="value">Email</text>
+                <text x="0" y="25" class="value">LinkedIn (suryanandanbabbar)</text>
+                <text x="300" y="25" class="value">Portfolio (suryanandan.framer.website)</text>
             </g>
         </g>
     </g>
