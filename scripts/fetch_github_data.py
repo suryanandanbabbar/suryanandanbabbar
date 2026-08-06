@@ -8,7 +8,7 @@ def fetch_github_data(username="suryanandanbabbar"):
     data = {
         "name": "Suryanandan Babbar",
         "username": username,
-        "followers": 0,
+        "commits": 0,
         "stars": 0,
         "public_repos": 0,
         "top_languages": [],
@@ -28,7 +28,6 @@ def fetch_github_data(username="suryanandanbabbar"):
         with urllib.request.urlopen(req) as response:
             user_data = json.loads(response.read().decode())
             data["name"] = user_data.get("name", data["name"])
-            data["followers"] = user_data.get("followers", 0)
             data["public_repos"] = user_data.get("public_repos", 0)
             
         # 2. Fetch Repos for Stars, Languages, and Latest Repo
@@ -62,6 +61,11 @@ def fetch_github_data(username="suryanandanbabbar"):
         query = """
         query($login: String!) {
           user(login: $login) {
+            contributionsCollection {
+              contributionCalendar {
+                totalContributions
+              }
+            }
             repositories(first: 10, orderBy: {field: PUSHED_AT, direction: DESC}) {
               nodes {
                 name
@@ -83,7 +87,11 @@ def fetch_github_data(username="suryanandanbabbar"):
             req = urllib.request.Request("https://api.github.com/graphql", data=req_data, headers=gql_headers)
             with urllib.request.urlopen(req) as response:
                 gql_data = json.loads(response.read().decode())
-                repos = gql_data.get("data", {}).get("user", {}).get("repositories", {}).get("nodes", [])
+                user_node = gql_data.get("data", {}).get("user", {})
+                
+                data["commits"] = user_node.get("contributionsCollection", {}).get("contributionCalendar", {}).get("totalContributions", 0)
+                
+                repos = user_node.get("repositories", {}).get("nodes", [])
                 
                 latest_release = "N/A"
                 for repo in repos:

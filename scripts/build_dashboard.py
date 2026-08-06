@@ -145,9 +145,9 @@ def generate_svg(config, theme, portrait_b64, github_data):
             <!-- GITHUB_TELEMETRY -->
             <g transform="translate(0, 240)">
                 <text x="0" y="0" class="title">GITHUB_TELEMETRY</text>
-                <text x="0" y="25" class="label">.public_repos</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{github_data.get('public_repos', 0)}</text>
-                <text x="0" y="45" class="label">.followers</text>    <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{github_data.get('followers', 0)}</text>
-                <text x="0" y="65" class="label">.stars</text>        <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{github_data.get('stars', 0)}</text>
+                <text x="0" y="25" class="label">Public Repos</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{github_data.get('public_repos', 0)}</text>
+                <text x="0" y="45" class="label">Commits</text>      <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{github_data.get('commits', 0)} (YTD)</text>
+                <text x="0" y="65" class="label">Stars</text>        <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{github_data.get('stars', 0)}</text>
 
                 <!-- Subcolumn for telemetry -->
                 <text x="280" y="25" class="label">.top_langs</text>  <text x="390" y="25" class="text-sec">:</text> <text x="410" y="25" class="value">{escape_xml(langs)}</text>
@@ -201,37 +201,43 @@ def generate_svg(config, theme, portrait_b64, github_data):
     svg_content += f"""
             </g>
 
-            <!-- OPEN_SOURCE -->
+            <!-- PACKAGE_REGISTRY -->
             <g transform="translate(280, 495)">
-                <text x="0" y="0" class="title">OPEN_SOURCE</text>
+                <text x="0" y="0" class="title">PACKAGE_REGISTRY</text>
                 """
-    y_pos = 25
-    # NPM packages
-    for pkg in open_source.get('npm', []):
-        name = pkg.get('name', '')
-        url = pkg.get('url', '')
-        badge = f"https://img.shields.io/npm/v/{name.replace('@', '%40')}?style=flat-square&amp;color=3FB950&amp;label={name.replace('@', '%40')}"
-        svg_content += f'<a href="{escape_xml(url)}" target="_blank"><image href="{badge}" x="0" y="{y_pos - 12}" height="20" /></a>\n'
-        y_pos += 30
+    registry_y = 25
+    
+    def render_badge(y, tag_text, tag_color_var, pkg_name, pkg_url):
+        # A sleek rounded tag: e.g., [pypi] or [npm]
+        return (
+            f'<rect x="0" y="{y - 14}" width="50" height="20" fill="var(--bg)" stroke="{tag_color_var}" stroke-width="1" rx="4" />\n'
+            f'<text x="25" y="{y}" class="text-sec" style="font-size: 11px; font-weight: bold; fill: {tag_color_var}" text-anchor="middle">{escape_xml(tag_text)}</text>\n'
+            f'<a href="{escape_xml(pkg_url)}" target="_blank"><text x="60" y="{y}" class="value">{escape_xml(pkg_name)}</text></a>\n'
+        )
 
     # PyPI packages
     for pkg in open_source.get('pypi', []):
-        name = pkg.get('name', '')
-        url = pkg.get('url', '')
-        badge = f"https://img.shields.io/pypi/v/{name}?style=flat-square&amp;color=58A6FF&amp;label={name}"
-        svg_content += f'<a href="{escape_xml(url)}" target="_blank"><image href="{badge}" x="0" y="{y_pos - 12}" height="20" /></a>\n'
-        y_pos += 30
+        svg_content += render_badge(registry_y, "pypi", "var(--success)", pkg.get('name', ''), pkg.get('url', ''))
+        registry_y += 30
+
+    # NPM packages
+    for pkg in open_source.get('npm', []):
+        svg_content += render_badge(registry_y, "npm", "var(--warning)", pkg.get('name', ''), pkg.get('url', ''))
+        registry_y += 30
+        
+    # Calculate contact Y-position to prevent layout breaking (minimum 665)
+    contact_y = max(665, 495 + registry_y + 20)
 
     svg_content += f"""
             </g>
 
             <!-- CONTACT -->
-            <g transform="translate(0, 665)">
+            <g transform="translate(0, {contact_y})">
                 <text x="0" y="0" class="title">CONTACT</text>
-                <a href="{escape_xml(contact.get('github', ''))}" target="_blank"><text x="0" y="25" class="value">gitHub</text></a>
-                <a href="{escape_xml(contact.get('linkedin', ''))}" target="_blank"><text x="90" y="25" class="value">linkedIn</text></a>
-                <a href="{escape_xml(contact.get('portfolio', ''))}" target="_blank"><text x="200" y="25" class="value">portfolio</text></a>
-                <a href="{escape_xml(contact.get('email', ''))}" target="_blank"><text x="310" y="25" class="value">email</text></a>
+                <a href="{escape_xml(contact.get('github', ''))}" target="_blank"><text x="0" y="25" class="value">GitHub</text></a>
+                <a href="{escape_xml(contact.get('linkedin', ''))}" target="_blank"><text x="90" y="25" class="value">LinkedIn</text></a>
+                <a href="{escape_xml(contact.get('portfolio', ''))}" target="_blank"><text x="200" y="25" class="value">Portfolio</text></a>
+                <a href="{escape_xml(contact.get('email', ''))}" target="_blank"><text x="310" y="25" class="value">Email</text></a>
             </g>
         </g>
     </g>
