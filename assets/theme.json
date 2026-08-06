@@ -1,0 +1,12 @@
+{
+  "background": "#0D1117",
+  "borders": "#30363D",
+  "labels": "#FFB454",
+  "values": "#79C0FF",
+  "success": "#3FB950",
+  "warnings": "#F85149",
+  "accent": "#58A6FF",
+  "cursor": "#58A6FF",
+  "text_primary": "#C9D1D9",
+  "text_secondary": "#8B949E"
+}

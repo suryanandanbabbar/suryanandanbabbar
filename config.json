@@ -1,0 +1,47 @@
+{
+  "profile": {
+    "role": "AI/ML Software Intern Candidate",
+    "education": "B.Tech CSE @ LPU",
+    "focus": "System Design & AI Reasoning",
+    "stack": "Python, Java, Spring Boot, FastAPI"
+  },
+  "specialization": [
+    "Artificial Intelligence",
+    "Backend Engineering",
+    "Data Engineering",
+    "Automation",
+    "System Design"
+  ],
+  "open_source": {
+    "npm": [
+      {
+        "name": "@suryanandanbabbar/prayas-kit",
+        "url": "https://www.npmjs.com/package/@suryanandanbabbar/prayas-kit"
+      }
+    ],
+    "pypi": [
+      {
+        "name": "infertrace",
+        "url": "https://pypi.org/project/infertrace/"
+      },
+      {
+        "name": "profilefusion",
+        "url": "https://pypi.org/project/profilefusion/"
+      },
+      {
+        "name": "datadriftguard",
+        "url": "https://pypi.org/project/datadriftguard/"
+      }
+    ]
+  },
+  "patent": {
+    "status": "Filed",
+    "application_no": "202511085417"
+  },
+  "contact": {
+    "github": "https://github.com/suryanandanbabbar",
+    "linkedin": "https://www.linkedin.com/in/suryanandanbabbar/",
+    "portfolio": "https://suryanandan.framer.website",
+    "email": "mailto:suryanandanbabbar@gmail.com"
+  }
+}
