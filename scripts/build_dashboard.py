@@ -142,20 +142,19 @@ def generate_svg(config, theme, portrait_b64, github_data):
             <!-- GITHUB_TELEMETRY -->
             <g transform="translate(0, 240)">
                 <text x="0" y="0" class="title">GITHUB_TELEMETRY</text>
-                <text x="0" y="25" class="label">Public Repos</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{github_data.get('public_repos', 0)}</text>
-                <text x="0" y="45" class="label">Commits</text>      <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{github_data.get('commits', 0)}</text>
-                <text x="0" y="65" class="label">Stars</text>        <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{github_data.get('stars', 0)}</text>
+                <text x="0" y="25" class="label">.public_repos</text> <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="value">{github_data.get('public_repos', 0)}</text>
+                <text x="0" y="45" class="label">.commits</text>      <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="value">{github_data.get('commits', 0)}</text>
+                <text x="0" y="65" class="label">.stars</text>        <text x="140" y="65" class="text-sec">:</text> <text x="160" y="65" class="value">{github_data.get('stars', 0)}</text>
 
                 <!-- Subcolumn for telemetry -->
                 <text x="280" y="25" class="label">.top_langs</text>  <text x="390" y="25" class="text-sec">:</text> <text x="410" y="25" class="value">{escape_xml(langs)}</text>
-                <text x="280" y="45" class="label">.latest_rel</text> <text x="390" y="45" class="text-sec">:</text> <text x="410" y="45" class="value">{escape_xml(github_data.get('latest_release', 'N/A'))}</text>
             </g>
 
             <!-- PATENT -->
             <g transform="translate(0, 330)">
                 <text x="0" y="0" class="title">PATENT</text>
-                <text x="0" y="25" class="label">.status</text>      <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="success">{escape_xml(patent.get('status', ''))}</text>
-                <text x="0" y="45" class="label">.application_no</text> <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="success">{escape_xml(patent.get('application_no', ''))}</text>
+                <text x="0" y="25" class="label">Status</text>      <text x="140" y="25" class="text-sec">:</text> <text x="160" y="25" class="success">{escape_xml(patent.get('status', ''))}</text>
+                <text x="0" y="45" class="label">Application</text> <text x="140" y="45" class="text-sec">:</text> <text x="160" y="45" class="success">{escape_xml(patent.get('application_no', ''))}</text>
             </g>
             
             <!-- SPECIALIZATION -->
