@@ -30,9 +30,6 @@
     .success { fill: var(--success); font-weight: bold; font-size: 14px; }
     .title { font-size: 16px; font-weight: bold; fill: var(--accent); }
     
-    a { cursor: pointer; }
-    a:hover text { text-decoration: underline; }
-    
     /* Animations */
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     .cursor { animation: blink 1s step-end infinite; fill: var(--cursor); }
@@ -155,26 +152,26 @@
                 <text x="0" y="0" class="title">PACKAGE_REGISTRY</text>
                 <rect x="0" y="11" width="50" height="20" fill="var(--bg)" stroke="var(--success)" stroke-width="1" rx="4" />
 <text x="25" y="25" class="text-sec" style="font-size: 11px; font-weight: bold; fill: var(--success)" text-anchor="middle">pypi</text>
-<a href="https://pypi.org/project/infertrace/" target="_blank"><text x="60" y="25" class="value">infertrace</text></a>
+<text x="60" y="25" class="value">infertrace</text>
 <rect x="0" y="41" width="50" height="20" fill="var(--bg)" stroke="var(--success)" stroke-width="1" rx="4" />
 <text x="25" y="55" class="text-sec" style="font-size: 11px; font-weight: bold; fill: var(--success)" text-anchor="middle">pypi</text>
-<a href="https://pypi.org/project/profilefusion/" target="_blank"><text x="60" y="55" class="value">profilefusion</text></a>
+<text x="60" y="55" class="value">profilefusion</text>
 <rect x="0" y="71" width="50" height="20" fill="var(--bg)" stroke="var(--success)" stroke-width="1" rx="4" />
 <text x="25" y="85" class="text-sec" style="font-size: 11px; font-weight: bold; fill: var(--success)" text-anchor="middle">pypi</text>
-<a href="https://pypi.org/project/datadriftguard/" target="_blank"><text x="60" y="85" class="value">datadriftguard</text></a>
+<text x="60" y="85" class="value">datadriftguard</text>
 <rect x="0" y="101" width="50" height="20" fill="var(--bg)" stroke="var(--warning)" stroke-width="1" rx="4" />
 <text x="25" y="115" class="text-sec" style="font-size: 11px; font-weight: bold; fill: var(--warning)" text-anchor="middle">npm</text>
-<a href="https://www.npmjs.com/package/@suryanandanbabbar/prayas-kit" target="_blank"><text x="60" y="115" class="value">@suryanandanbabbar/prayas-kit</text></a>
+<text x="60" y="115" class="value">@suryanandanbabbar/prayas-kit</text>
 
             </g>
 
             <!-- CONTACT -->
             <g transform="translate(0, 665)">
                 <text x="0" y="0" class="title">CONTACT</text>
-                <a href="https://github.com/suryanandanbabbar" target="_blank"><text x="0" y="25" class="value">GitHub</text></a>
-                <a href="https://www.linkedin.com/in/suryanandanbabbar/" target="_blank"><text x="90" y="25" class="value">LinkedIn</text></a>
-                <a href="https://suryanandan.framer.website" target="_blank"><text x="200" y="25" class="value">Portfolio</text></a>
-                <a href="mailto:suryanandanbabbar@gmail.com" target="_blank"><text x="310" y="25" class="value">Email</text></a>
+                <text x="0" y="25" class="value">GitHub</text>
+                <text x="90" y="25" class="value">LinkedIn</text>
+                <text x="200" y="25" class="value">Portfolio</text>
+                <text x="310" y="25" class="value">Email</text>
             </g>
         </g>
     </g>

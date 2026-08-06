@@ -54,9 +54,6 @@ def generate_svg(config, theme, portrait_b64, github_data):
     .success {{ fill: var(--success); font-weight: bold; font-size: 14px; }}
     .title {{ font-size: 16px; font-weight: bold; fill: var(--accent); }}
     
-    a {{ cursor: pointer; }}
-    a:hover text {{ text-decoration: underline; }}
-    
     /* Animations */
     @keyframes blink {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
     .cursor {{ animation: blink 1s step-end infinite; fill: var(--cursor); }}
@@ -212,7 +209,7 @@ def generate_svg(config, theme, portrait_b64, github_data):
         return (
             f'<rect x="0" y="{y - 14}" width="50" height="20" fill="var(--bg)" stroke="{tag_color_var}" stroke-width="1" rx="4" />\n'
             f'<text x="25" y="{y}" class="text-sec" style="font-size: 11px; font-weight: bold; fill: {tag_color_var}" text-anchor="middle">{escape_xml(tag_text)}</text>\n'
-            f'<a href="{escape_xml(pkg_url)}" target="_blank"><text x="60" y="{y}" class="value">{escape_xml(pkg_name)}</text></a>\n'
+            f'<text x="60" y="{y}" class="value">{escape_xml(pkg_name)}</text>\n'
         )
 
     # PyPI packages
@@ -234,10 +231,10 @@ def generate_svg(config, theme, portrait_b64, github_data):
             <!-- CONTACT -->
             <g transform="translate(0, {contact_y})">
                 <text x="0" y="0" class="title">CONTACT</text>
-                <a href="{escape_xml(contact.get('github', ''))}" target="_blank"><text x="0" y="25" class="value">GitHub</text></a>
-                <a href="{escape_xml(contact.get('linkedin', ''))}" target="_blank"><text x="90" y="25" class="value">LinkedIn</text></a>
-                <a href="{escape_xml(contact.get('portfolio', ''))}" target="_blank"><text x="200" y="25" class="value">Portfolio</text></a>
-                <a href="{escape_xml(contact.get('email', ''))}" target="_blank"><text x="310" y="25" class="value">Email</text></a>
+                <text x="0" y="25" class="value">GitHub</text>
+                <text x="90" y="25" class="value">LinkedIn</text>
+                <text x="200" y="25" class="value">Portfolio</text>
+                <text x="310" y="25" class="value">Email</text>
             </g>
         </g>
     </g>
