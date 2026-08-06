@@ -1,17 +1,16 @@
 {
   "name": "Suryanandan Babbar",
   "username": "suryanandanbabbar",
-  "commits": "1.3k+",
+  "commits": 757,
   "stars": 13,
-  "public_repos": 32,
+  "public_repos": 30,
   "top_languages": [
-    "Python",
     "Java",
-    "C/C++",
-    "Swift"
+    "Python",
+    "HTML"
   ],
-  "latest_repo": "InferTrace",
-  "latest_repo_lang": "Python, FastAPI, ML",
-  "latest_repo_updated": "August 2026",
-  "latest_release": "August 2026"
+  "latest_repo": "suryanandanbabbar",
+  "latest_repo_lang": "Python",
+  "latest_repo_updated": "2026-08-06",
+  "latest_release": "N/A"
 }
